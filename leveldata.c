@@ -72,70 +72,70 @@ int IsCCLeastAll(FILE *level)
         case 0x0be56f93:    // Reach the goal after defeating at least/all (n) Mechakoopa(s).
             count += findTotalPossibleObjects(level, 111, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 111, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x103bba8c:    // Reach the goal after defeating at least/all (n) Cheep Cheep(s).
             count += findTotalPossibleObjects(level, 56, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 56, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x2cc36aab:   // Reach the goal after defeating at least/all (n) Larry(s).
             count += findTotalPossibleObjects(level, 122, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 122, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x387c22ca:    // Reach the goal after defeating at least/all (n) Blooper(s).
             count += findTotalPossibleObjects(level, 48, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 48, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x3b8a1111:    // Reach the goal after defeating at least/all (n) Spike(s). [FLAGS]
             count += findTotalPossibleObjects(level, 74, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 74, 0, 0x4, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x3c164eb1:    // Reach the goal after defeating at least/all (n) Boom Boom(s). (SPECIAL CASE) [FLAGS]
             count += findTotalPossibleObjects(level, 77, 0, 0x4, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 77, 0, 0x4, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x3f4124e8:    // Reach the goal after defeating at least/all (n) Porcupuffer(s).
             count += findTotalPossibleObjects(level, 114, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 114, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x3f50b513:    // Reach the goal after defeating at least/all (n) Charvaargh(s).
             count += findTotalPossibleObjects(level, 86, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 86, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x405dce65:    // Reach the goal after defeating at least/all (n) Bullet Bill(s). (SPECIAL CASE)
             count += 10*objectCountCID(level, 13, 0xffff, 0, 0, MAINWORLD);
             count += 10*objectCountCID(level, 13, 0xffff, 0, 0, SUBWORLD);
-            return count;
+            return count - cc_mag;
         case 0x4067ab4e:    // Reach the goal after defeating at least/all (n) Bully/Bullies.
             count += findTotalPossibleObjects(level, 117, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 117, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x467afb58:    // Reach the goal after defeating at least/all (n) Hop-Chop(s).
             count += findTotalPossibleObjects(level, 50, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 50, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x48b4157b:    // Reach the goal while holding a Red POW Block. OR Reach the goal after activating at least/all (n) Red POW Block(s). (SPECIAL CASE) [FLAGS]
             if (cc_mag == 0) {return 0;}
             count += findTotalPossibleObjects(level, 19, 0x4, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 19, 0x4, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x48d111e0:    // Reach the goal after defeating at least/all (n) Bob-omb(s).
             count += findTotalPossibleObjects(level, 15, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 15, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x4b115542:    // Reach the goal after defeating at least/all (n) Spiny/Spinies. (SPECIAL CASE) [FLAGS]
             count += findTotalPossibleObjects(level, 25, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 25, 0, 0, SUBWORLD, 10);
             count += 10*objectCountCID(level, 30, 0xffff, 0, 0, MAINWORLD); // lakitus throw spinys by default
             count += 10*objectCountCID(level, 30, 0xffff, 0, 0, SUBWORLD);
-            return count;
+            return count - cc_mag;
         case 0x4b980b7f:    // Reach the goal after defeating at least/all (n) Bowser(s)/Meowser(s).
             count += findTotalPossibleObjects(level, 62, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 62, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x4c44da92:    // Reach the goal after defeating at least/all (n) Ant Trooper(s).
             count += findTotalPossibleObjects(level, 96, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 96, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x501c7c00:    // Reach the goal after defeating at least/all (n) Boo(s). (SPECIAL CASE) [FLAGS]
             count += findTotalPossibleObjects(level, 41, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 41, 0, 0x4, SUBWORLD, 10);
@@ -143,23 +143,23 @@ int IsCCLeastAll(FILE *level)
                 count += findTotalPossibleObjects(level, 41, 0x4, 0, MAINWORLD, 8);
                 count += findTotalPossibleObjects(level, 41, 0x4, 0, SUBWORLD, 8);
             }
-            return count;
+            return count - cc_mag;
         case 0x54fea275:    // Reach the goal after defeating at least/all (n) Roy(s).
             count += findTotalPossibleObjects(level, 125, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 125, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x5559be79:    // Reach the goal after defeating at least/all (n) Morton(s).
             count += objectCount(level, 121, 0, 0, MAINWORLD);
             count += objectCount(level, 121, 0, 0, SUBWORLD);
-            return count;
+            return count - cc_mag;
         case 0x563755f2:    // Reach the goal after defeating at least/all (n) Fish Bone(s).
             count += findTotalPossibleObjects(level, 103, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 103, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x5a085610:    // Reach the goal after defeating at least/all (n) Monty Mole(s).
             count += findTotalPossibleObjects(level, 102, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 102, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x62b74a93:    // Reach the goal after picking up at least/all (n) 1-Up Mushroom(s). (SPECIAL CASE)
             if (!((getTheme(level, MAINWORLD) == 0x0) && (isNighttime(level, MAINWORLD) == 0x2))){
                 count += findTotalPossibleObjects(level, 33, 0, 0, MAINWORLD, 3);
@@ -169,49 +169,49 @@ int IsCCLeastAll(FILE *level)
                 count += findTotalPossibleObjects(level, 33, 0, 0, SUBWORLD, 3);
                 count += objectCountCID(level, 106, 33, 0, 0, SUBWORLD);
             }
-            return count;
+            return count - cc_mag;
         case 0x634a6671:    // Reach the goal after defeating at least/all (n) Hammer Bro(s.). [FLAGS]
             count += findTotalPossibleObjects(level, 3, 0, 0x4000,MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 3, 0, 0x4000, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x63f3d532:    // Reach the goal after hitting at least/all (n) P Switch(es). OR Reach the goal while holding a P Switch. (SPECIAL CASE)
             if (cc_mag == 0) {return 0;}
             count += findTotalPossibleObjects(level, 18, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 18, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x66477be4:    // Reach the goal after activating at least/all (n) POW Block(s). OR Reach the goal while holding a POW Block. (SPECIAL CASE) [FLAGS]
             if (cc_mag == 0) {return 0;}
             count += findTotalPossibleObjects(level, 19, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 19, 0, 0x4, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x66c2b75e:    // Reach the goal after defeating at least/all (n) Angry Sun(s). [FLAGS]
             count += findTotalPossibleObjects(level, 104, 0, 0x4, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 104, 0, 0x4, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x671f29b5:    // Reach the goal after defeating at least/all (n) Pokey(s).
             count += findTotalPossibleObjects(level, 78, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 78, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x6daa9a3f:    // Reach the goal after defeating at least/all (n) Pom Pom(s). [FLAGS]
             count += findTotalPossibleObjects(level, 77, 0x4, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 77, 0x4, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x756120ee:    // Reach the goal after defeating at least/all (n) Peepa(s). [FLAGS]
             count += findTotalPossibleObjects(level, 41, 0x4, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 41, 0x4, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x794c6eb3:    // Reach the goal after defeating at least/all (n) Lakitu(s).
             count += findTotalPossibleObjects(level, 30, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 30, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x7981172f:    // Reach the goal after defeating at least/all (n) Lemmy(s).
             count += findTotalPossibleObjects(level, 120, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 120, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x7a128199:    // Reach the goal after defeating at least/all (n) Lava Bubble(s).
             count += findTotalPossibleObjects(level, 60, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 60, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0x7f07acbf:    // Reach the goal after defeating at least/all (n) Goomba(s)/Galoomba(s). (SPECIAL CASE) [FLAGS]
             count += findTotalPossibleObjects(level, 0, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 0, 0, 0x4, SUBWORLD, 10);
@@ -220,57 +220,57 @@ int IsCCLeastAll(FILE *level)
                 count += findTotalPossibleObjects(level, 45, 0, 0, MAINWORLD, 4); // shoe goombas
                 count += findTotalPossibleObjects(level, 45, 0, 0, SUBWORLD, 4);
             }
-            return count;
+            return count - cc_mag;
         case 0x7f88648a:    // Reach the goal after defeating at least/all (n) Thwomp(s).
             count += findTotalPossibleObjects(level, 12, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 12, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0x86aae3fd:    // Reach the goal after defeating at least/all (n) Iggy(s).
             count += findTotalPossibleObjects(level, 124, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 124, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xa09bb51f:    // Reach the goal after defeating at least/all (n) Sledge Bro(s.). [FLAGS]
             count += findTotalPossibleObjects(level, 3, 0x4000, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 3, 0x4000, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xa3aec34a:    // Reach the goal after defeating at least/all (n) Rocky Wrench(es).
             count += findTotalPossibleObjects(level, 58, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 58, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xa3e39544:    // Reach the goal after grabbing at least/all (n) 50-Coin(s). [FLAGS]
             count += findTotalPossibleObjects(level, 70, 0x80000, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 70, 0x80000, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xbd35b4ac:    // Reach the goal after defeating at least/all (n) Wendy(s).
             count += findTotalPossibleObjects(level, 123, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 123, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xc77685e8:    // Reach the goal after defeating at least/all (n) Goombrat(s)/Goombud(s). [FLAGS]
             count += findTotalPossibleObjects(level, 0, 0x4, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 0, 0x4, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xc78f5040:    // Reach the goal after grabbing at least/all (n) 10-Coin(s). [FLAGS]
             count += findTotalPossibleObjects(level, 70, 0, 0xc0000, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 70, 0, 0xc0000, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xc7dad20f:    // Reach the goal after defeating at least/all (n) Buzzy Beetle(s). [FLAGS]
             count += findTotalPossibleObjects(level, 28, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 28, 0, 0x4, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xca315249:    // Reach the goal after defeating at least/all (n) Bowser Jr.(s).
             count += findTotalPossibleObjects(level, 98, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 98, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xcce12a46:    // Reach the goal after defeating at least/all (n) Koopa Troopa(s). (SPECIAL CASE)
             count += findTotalPossibleObjects(level, 1, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 1, 0, 0, SUBWORLD, 10);
             count += findTotalPossibleObjects(level, 72, 0, 0, MAINWORLD, 0); // koopa troopa car included
             count += findTotalPossibleObjects(level, 72, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xce2e5a15:    // Reach the goal after defeating at least/all (n) Chain Chomp(s).
             count += findTotalPossibleObjects(level, 61, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 61, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xce9a707b:    // Reach the goal after defeating at least/all (n) Muncher(s). (SPECIAL)
             count += objectCount(level, 57, 0, 0, MAINWORLD);                      // standalone
             count += objectCountCID(level, 4, 57, 0, 0, MAINWORLD);                // blocks
@@ -288,11 +288,11 @@ int IsCCLeastAll(FILE *level)
             count += objectCountCID(level, 23, 57, 0, 0, SUBWORLD);                // note blocks
             count += objectCountCID(level, 29, 57, 0, 0, SUBWORLD);                // hidden blocks
             count += 10 * objectCountCID(level, 30, 57, 0, 0, SUBWORLD);           // lakitus
-            return count;
+            return count - cc_mag;
         case 0xcf81610a:    // Reach the goal after defeating at least/all (n) Wiggler(s).
             count += findTotalPossibleObjects(level, 52, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 52, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xdf6717de:    // Reach the goal after defeating at least/all (n) Piranha Plant(s)/Jumping Piranha Plant(s). (SPECIAL CASE) [FLAGS]
             uint32_t flags_ex = 0x0;
             if (getStyle(level) == 0x574d){flags_ex = 0x4;}
@@ -312,19 +312,19 @@ int IsCCLeastAll(FILE *level)
             count += objectCountCID(level, 23, 2, 0, flags_ex, SUBWORLD);                // note blocks
             count += objectCountCID(level, 29, 2, 0, flags_ex, SUBWORLD);                // hidden blocks
             count += 10 * objectCountCID(level, 30, 2, 0, flags_ex, SUBWORLD);           // lakitus
-            return count;
+            return count - cc_mag;
         case 0xe25c5f60:    // Reach the goal after defeating at least/all (n) Dry Bones. [FLAGS]
             count += findTotalPossibleObjects(level, 46, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 46, 0, 0x4, SUBWORLD, 10); 
-            return count;
+            return count - cc_mag;
         case 0xe3f62c75:    // Reach the goal after defeating at least/all (n) Stingby/Stingbies.
             count += findTotalPossibleObjects(level, 65, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 65, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xe47c2be8:    // Reach the goal after defeating at least/all (n) Piranha Creeper(s).
             count += findTotalPossibleObjects(level, 107, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 107, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xe50302f7:    // Reach the goal after defeating at least/all (n) Fire Piranha Plant(s). (SPECIAL CASE) [FLAGS]
             count += objectCount(level, 2, 0x4, 0, MAINWORLD);                      // standalone
             count += objectCountCID(level, 4, 2, 0x4, 0, MAINWORLD);                // blocks
@@ -342,19 +342,19 @@ int IsCCLeastAll(FILE *level)
             count += objectCountCID(level, 23, 2, 0x4, 0, SUBWORLD);                // note blocks
             count += objectCountCID(level, 29, 2, 0x4, 0, SUBWORLD);                // hidden blocks
             count += 10 * objectCountCID(level, 30, 2, 0x4, 0, SUBWORLD);           // lakitus
-            return count;
+            return count - cc_mag;
         case 0xe6f2eebe:    // Reach the goal after breaking at least/all (n) Crate(s).
             count += findTotalPossibleObjects(level, 112, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 112, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xece74bc7:    // Reach the goal after defeating at least/all (n) Ludwig(s).
             count += findTotalPossibleObjects(level, 126, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 126, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xf0f35cba:    // Reach the goal after defeating at least/all (n) Skipsqueak(s).
             count += findTotalPossibleObjects(level, 51, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 51, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xf55b3863:    // Reach the goal after grabbing at least/all (n) Coin(s). (SPECIAL CASE) [FLAGS]
             int isPSwitchPresent = 0;    
             isPSwitchPresent += findTotalPossibleObjects(level, 18, 0, 0, MAINWORLD, 2);
@@ -395,23 +395,23 @@ int IsCCLeastAll(FILE *level)
                 count += objectCountCID(level, 4, 0xffff, 0, 0, MAINWORLD);       // blocks (can turn into coins via p-switch, but only count if pswitch exists)
                 count += objectCountCID(level, 4, 0xffff, 0, 0, SUBWORLD);
             }
-            return count;
+            return count - cc_mag;
         case 0xf571d608:    // Reach the goal after defeating at least/all (n) Magikoopa(s).
             count += findTotalPossibleObjects(level, 39, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 39, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xf5b932c2:    // Reach the goal after grabbing at least/all (n) 30-Coin(s). [FLAGS]
             count += findTotalPossibleObjects(level, 70, 0x40000, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 70, 0x40000, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         case 0xfe75363e:    // Reach the goal after defeating at least/all (n) Spike Top(s).
             count += findTotalPossibleObjects(level, 40, 0, 0, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 40, 0, 0, SUBWORLD, 10);
-            return count;
+            return count - cc_mag;
         case 0xffe76309:    // Reach the goal after defeating at least/all (n) Banzai Bill(s).
             count += findTotalPossibleObjects(level, 32, 0, 0, MAINWORLD, 0);
             count += findTotalPossibleObjects(level, 32, 0, 0, SUBWORLD, 0);
-            return count;
+            return count - cc_mag;
         default:
             return -1;
     }
@@ -424,7 +424,7 @@ int findTotalPossibleObjects(FILE *level, uint16_t obj, uint32_t objFlags, uint3
     int count = 0;
     count += objectCount(level, obj, objFlags, objFlags_ex, world);                      // standalone
     count += objectCountCID(level, 4, obj, objFlags, objFlags_ex, world);                // blocks
-    count += objectCountCID(level, 5, obj, objFlags, objFlags_ex, world);                // ? blocks
+    count += objectCountCID(level, 5, obj, objFlags, objFlags_ex, world);                // ? blocksd
     count += (mag-1) * objectCount(level, obj, (objFlags | 0x1), objFlags_ex, world);    // pipes
     count += mag * objectCountCID(level, 13, obj, objFlags, objFlags_ex, world);         // bill blasters
     count += objectCountCID(level, 23, obj, objFlags, objFlags_ex, world);               // note blocks
