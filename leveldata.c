@@ -140,8 +140,8 @@ int IsCCLeastAll(FILE *level)
             count += findTotalPossibleObjects(level, 41, 0, 0x4, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 41, 0, 0x4, SUBWORLD, 10);
             if (getStyle(level) != 0x5733){ // not 3D world (peepas) vs other styles (boo rings)
-                count += findTotalPossibleObjects(level, 41, 0x4, 0, MAINWORLD, 8);
-                count += findTotalPossibleObjects(level, 41, 0x4, 0, SUBWORLD, 8);
+                count += 8 * findTotalPossibleObjects(level, 41, 0x4, 0, MAINWORLD, 1);
+                count += 8 * findTotalPossibleObjects(level, 41, 0x4, 0, SUBWORLD, 1);
             }
             return count - cc_mag;
         case 0x54fea275:    // Reach the goal after defeating at least/all (n) Roy(s).
@@ -165,13 +165,13 @@ int IsCCLeastAll(FILE *level)
                 count += findTotalPossibleObjects(level, 33, 0, 0, MAINWORLD, 3);
                 count += objectCountCID(level, 106, 33, 0, 0, MAINWORLD);
             }
-            if ((getTheme(level, SUBWORLD) == 0x0) && (isNighttime(level, SUBWORLD) == 0x2)){
+            if (!((getTheme(level, SUBWORLD) == 0x0) && (isNighttime(level, SUBWORLD) == 0x2))){
                 count += findTotalPossibleObjects(level, 33, 0, 0, SUBWORLD, 3);
                 count += objectCountCID(level, 106, 33, 0, 0, SUBWORLD);
             }
             return count - cc_mag;
         case 0x634a6671:    // Reach the goal after defeating at least/all (n) Hammer Bro(s.). [FLAGS]
-            count += findTotalPossibleObjects(level, 3, 0, 0x4000,MAINWORLD, 10);
+            count += findTotalPossibleObjects(level, 3, 0, 0x4000, MAINWORLD, 10);
             count += findTotalPossibleObjects(level, 3, 0, 0x4000, SUBWORLD, 10);
             return count - cc_mag;
         case 0x63f3d532:    // Reach the goal after hitting at least/all (n) P Switch(es). OR Reach the goal while holding a P Switch. (SPECIAL CASE)
@@ -524,4 +524,5 @@ uint8_t isNighttime(FILE *level, uint32_t world)
     fread(&worldval, sizeof(worldval), 1, level);
     return worldval;
 }
+
 
