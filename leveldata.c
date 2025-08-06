@@ -123,10 +123,10 @@ int IsCCLeastAll(FILE *level)
             count += findTotalPossibleObjects(level, 15, 0, 0, SUBWORLD, 10);
             return count - cc_mag;
         case 0x4b115542:    // Reach the goal after defeating at least/all (n) Spiny/Spinies. (SPECIAL CASE) [FLAGS]
-            count += findTotalPossibleObjects(level, 25, 0, 0, MAINWORLD, 10);
-            count += findTotalPossibleObjects(level, 25, 0, 0, SUBWORLD, 10);
-            count += 10*objectCountCID(level, 30, 0xffff, 0, 0, MAINWORLD); // lakitus throw spinys by default
-            count += 10*objectCountCID(level, 30, 0xffff, 0, 0, SUBWORLD);
+            count += findTotalPossibleObjects(level, 25, 0, 0x4, MAINWORLD, 10);
+            count += findTotalPossibleObjects(level, 25, 0, 0x4, SUBWORLD, 10);
+            count += 10*objectCountCID(level, 30, 0xffff, 0, 0x4, MAINWORLD); // lakitus throw spinys by default
+            count += 10*objectCountCID(level, 30, 0xffff, 0, 0x4, SUBWORLD);
             return count - cc_mag;
         case 0x4b980b7f:    // Reach the goal after defeating at least/all (n) Bowser(s)/Meowser(s).
             count += findTotalPossibleObjects(level, 62, 0, 0, MAINWORLD, 0);
@@ -524,3 +524,4 @@ uint8_t isNighttime(FILE *level, uint32_t world)
     fread(&worldval, sizeof(worldval), 1, level);
     return worldval;
 }
+
