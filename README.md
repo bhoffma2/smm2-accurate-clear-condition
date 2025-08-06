@@ -7,5 +7,5 @@ Look at the leveldata.h file for documentation on functions.
 Use the driver.c file to run the program on an unencrypted level file.
 
 Thanks to the following people for their support!
--TGR, for their API used to download level files at https://tgrcode.com/mm2/docs/
--liamadvance, for the documentation at https://github.com/liamadvance/smm2-documentation
+  -TGR, for their API used to download level files at https://tgrcode.com/mm2/docs/
+  -liamadvance, for the documentation at https://github.com/liamadvance/smm2-documentation
