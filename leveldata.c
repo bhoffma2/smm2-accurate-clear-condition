@@ -24,9 +24,9 @@ int IsCCLeastAll(FILE *level)
     uint32_t cc_val = cc_bin[0] | cc_bin[1] << 8 | cc_bin[2] << 16 | cc_bin[3] << 24;
 
     // Finding the CC magnitude
-    int cc_mag;
+    uint16_t cc_mag;
     fseek(level, 0x6, SEEK_SET);
-    fread(&cc_mag, 1, 1, level);
+    fread(&cc_mag, sizeof(cc_mag), 1, level);
     
     int count = 0;
     
@@ -524,5 +524,6 @@ uint8_t isNighttime(FILE *level, uint32_t world)
     fread(&worldval, sizeof(worldval), 1, level);
     return worldval;
 }
+
 
 
